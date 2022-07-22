@@ -1,0 +1,37 @@
+{% extends "layout/base.html" %}
+
+{% block contents %}
+<div class="container" style="margin-top: 30px;">
+   <h4>Data Siswa</h4>
+   <div class="row">
+        <table class="table table-bordered" id="tblSiswa">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nama Mahasiswa</th>
+                    <th>#</th>
+                    <th>#</th>
+                    <th>#</th>
+                    <th>#</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for siswa in dataSiswa %}
+            <tr>
+                <td>{{ siswa.ord }}</td>
+                <td>{{ siswa.nama }}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+   </div>
+</div>
+
+<script>
+    $("#tblSiswa").dataTable();
+</script>
+{% endblock contents %}
